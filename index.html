@@ -61,7 +61,6 @@
   </script>
 
   <style>
-    /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -76,7 +75,6 @@
       background: #0c433d;
     }
 
-    /* Glow utility */
     .glow-teal {
       box-shadow: 0 0 35px -5px rgba(39, 126, 115, 0.3);
     }
@@ -84,20 +82,17 @@
       box-shadow: 0 0 35px -5px rgba(233, 181, 87, 0.3);
     }
 
-    /* Focus outline standard */
     a:focus-visible, button:focus-visible {
       outline: 2px solid #277e73;
       outline-offset: 3px;
     }
 
-    /* Smooth Lightbox Modal */
     .modal-backdrop {
       background: rgba(12, 67, 61, 0.90);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
 
-    /* Hover motion is finite so it never loops without a user trigger. */
     @keyframes logoHoverLeft {
       0%, 100% { transform: translateY(0) scale(1) rotate(0); }
       35% { transform: translateY(-15px) scale(1.035) rotate(-1deg); }
@@ -132,57 +127,21 @@
       filter: drop-shadow(0 12px 18px rgba(12, 67, 61, 0.24));
     }
     @media (prefers-reduced-motion: reduce) {
-      .hero-3d-left, .hero-3d-right, .hero-mobile-logo img, .timeline-aura-2026, .timeline-aura-2025 {
+      .hero-3d-left, .hero-3d-right, .hero-mobile-logo img {
         animation: none !important;
         transition: none;
       }
     }
 
-    /* Looping Radiant Aura on Timeline */
-    @keyframes auraGlow2026 {
-      0%, 100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 20px 6px rgba(39, 126, 115, 0.75), 0 0 35px 12px rgba(233, 181, 87, 0.45);
-        opacity: 0.8;
-      }
-      50% {
-        transform: scale(1.35);
-        box-shadow: 0 0 32px 12px rgba(39, 126, 115, 1), 0 0 55px 20px rgba(233, 181, 87, 0.75);
-        opacity: 1;
-      }
-    }
-    @keyframes auraGlow2025 {
-      0%, 100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 20px 6px rgba(0, 103, 73, 0.75), 0 0 35px 12px rgba(12, 67, 61, 0.45);
-        opacity: 0.8;
-      }
-      50% {
-        transform: scale(1.35);
-        box-shadow: 0 0 32px 12px rgba(0, 103, 73, 1), 0 0 55px 20px rgba(12, 67, 61, 0.75);
-        opacity: 1;
-      }
-    }
-    .timeline-aura-2026 {
-      animation: auraGlow2026 2.5s ease-in-out infinite;
-      background: radial-gradient(circle, rgba(39, 126, 115, 0.9) 0%, rgba(233, 181, 87, 0.5) 60%, transparent 85%);
-    }
-    .timeline-aura-2025 {
-      animation: auraGlow2025 2.5s ease-in-out infinite;
-      animation-delay: 1.25s;
-      background: radial-gradient(circle, rgba(0, 103, 73, 0.9) 0%, rgba(12, 67, 61, 0.5) 60%, transparent 85%);
-    }
-      #riwayat, #statistik, #faq { background-color: #f8fafc; }
+    #statistik, #faq { background-color: #f8fafc; }
     #dokumentasi { background-color: #0c433d; }
-    #riwayat > div > div:first-child h2,
     #statistik > div > div:first-child h2,
     #faq > div > div:first-child h2 { color: #0c433d; }
-    #riwayat > div > div:first-child p,
     #statistik > div > div:first-child p,
     #faq > div > div:first-child p { color: #475569; }
-    #riwayat .text-slate-400, #statistik .text-slate-400,
+    #statistik .text-slate-400,
     #dokumentasi .text-slate-400, #faq .text-slate-400, footer .text-slate-400 { color: #d7e7e2; }
-    #riwayat .text-slate-300, #statistik .text-slate-300,
+    #statistik .text-slate-300,
     #dokumentasi .text-slate-300, #faq .text-slate-300, footer .text-slate-300 { color: #edf5f2; }
     #statistik .statistics-grid { grid-template-columns: minmax(0, 1fr); }
     @media (min-width: 380px) {
@@ -237,17 +196,6 @@
     #dokumentasi .gallery-item > div:first-child > div span,
     #dokumentasi .gallery-item > div:first-child > div h3 { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); }
     #faq button:hover { color: #e9b557; }
-    .company-tab-btn { color: #475569; background: transparent; }
-    .company-tab-btn:hover:not(.is-active) { color: #0c433d; background: #eef4f2; }
-    .company-tab-btn.is-active { color: #ffffff; background: #277e73; box-shadow: 0 1px 3px rgba(12, 67, 61, 0.18); }
-    @media (min-width: 1024px) {
-      #company-cards-container[data-filter="bca"] #card-bca,
-      #company-cards-container[data-filter="hacktiv"] #card-hacktiv8 {
-        grid-column: 1 / -1;
-        width: calc((100% - 2rem) / 2);
-        justify-self: center;
-      }
-    }
     button, a[href] { cursor: pointer; }
   </style>
 </head>
@@ -472,232 +420,122 @@
       </div>
     </section>
 
-    <section id="perusahaan" class="py-24 relative bg-[#f8fafc]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0c433d] mb-3">
-            Two Worlds, One Industry
-          </h2>
-          <p class="text-slate-600 text-base sm:text-lg">
-            Mengenal perbankan digital dan pendidikan coding lewat kunjungan.
-          </p>
-        </div>
+    <section id="perusahaan" class="py-20 sm:py-28 lg:py-32 relative bg-[#f3f6f4] overflow-hidden">
+      <img src="assets/images/footprint-left.png" alt="" class="absolute -left-12 sm:-left-20 lg:-left-28 top-8 sm:top-12 w-48 sm:w-72 lg:w-96 h-auto opacity-25 pointer-events-none select-none z-0" aria-hidden="true">
+      <img src="assets/images/footprint-right.png" alt="" class="absolute -right-16 sm:-right-24 lg:-right-36 top-[33%] sm:top-[35%] w-60 sm:w-84 lg:w-[440px] h-auto opacity-25 pointer-events-none select-none z-0" aria-hidden="true">
+      <img src="assets/images/footprint-left.png" alt="" class="absolute -left-12 sm:-left-20 lg:-left-28 top-[65%] sm:top-[68%] w-48 sm:w-72 lg:w-96 h-auto opacity-25 pointer-events-none select-none z-0" aria-hidden="true">
+      <img src="assets/images/footprint-right.png" alt="" class="absolute -right-16 sm:-right-24 lg:-right-36 -bottom-6 sm:-bottom-10 w-60 sm:w-84 lg:w-[440px] h-auto opacity-25 pointer-events-none select-none z-0" aria-hidden="true">
 
-        <div class="flex justify-center mb-10 sm:mb-12">
-          <div class="grid w-full max-w-[560px] grid-cols-3 gap-1.5 p-1.5 rounded-2xl bg-white border border-slate-200 shadow-md sm:inline-flex sm:w-auto sm:grid-cols-none sm:gap-1">
-            <button id="tab-all-btn" type="button" class="company-tab-btn is-active min-w-0 min-h-[54px] sm:min-h-[44px] px-1 sm:px-5 py-2.5 rounded-xl text-center text-xs leading-tight sm:text-sm font-semibold transition-all duration-200" data-target="all" aria-pressed="true">
-              Kedua Perusahaan
-            </button>
-            <button id="tab-bca-btn" type="button" class="company-tab-btn min-w-0 min-h-[54px] sm:min-h-[44px] px-1 sm:px-5 py-2.5 rounded-xl text-center text-xs leading-tight sm:text-sm font-semibold transition-all duration-200" data-target="bca" aria-pressed="false">
-              Blu by BCA Digital
-            </button>
-            <button id="tab-hacktiv-btn" type="button" class="company-tab-btn min-w-0 min-h-[54px] sm:min-h-[44px] px-1 sm:px-5 py-2.5 rounded-xl text-center text-xs leading-tight sm:text-sm font-semibold transition-all duration-200" data-target="hacktiv" aria-pressed="false">
-              Hacktiv8
-            </button>
-          </div>
-        </div>
-
-        <div id="company-cards-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8" data-filter="all">
-          
-          <div id="card-hacktiv8" class="company-card rounded-2xl bg-white border border-[#277e73]/20 overflow-hidden shadow-xl transition-all duration-300 hover:border-[#277e73]">
-            <div class="p-5 sm:p-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 bg-[#f4fbf9]">
-              <div class="rounded-lg bg-[#0c433d] px-2.5 py-1.5 ring-1 ring-[#0c433d]/10">
-                <img src="assets/logos/hacktiv8_official.png" alt="Logo Hacktiv8" class="block w-[168px] sm:w-[180px] h-auto" width="2995" height="660">
-              </div>
-              <span class="text-xs font-bold uppercase tracking-wider text-[#277e73]">
-                Technology Education
-              </span>
-            </div>
-
-            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100 group">
-              <img src="assets/images/hacktiv8-fotobersama.jpg" alt="Foto Bersama Kunjungan di Hacktiv8" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="553" height="311">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0c433d]/80 via-transparent to-transparent"></div>
-              <span class="absolute bottom-3 left-4 text-xs font-semibold text-white bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">
-                Sesi Kunjungan &amp; Diskusi Tim Hacktiv8
-              </span>
-            </div>
-
-            <div class="p-6 sm:p-8">
-              <p class="text-slate-700 text-base leading-relaxed mb-5">
-                Hacktiv8 berfokus pada coding bootcamp dan pengembangan talenta digital.
-              </p>
-
-              <p class="text-sm font-medium text-slate-700 mb-4">
-                <span class="text-slate-500 font-semibold">Fokus:</span> Coding · Talenta digital
-              </p>
-
-              <p class="text-xs text-slate-500 leading-relaxed mb-8">
-                Membahas kurikulum coding, portofolio kerja, dan tanya jawab bersama mentor.
-              </p>
-
-              <a href="https://www.hacktiv8.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-3.5 px-5 rounded-xl bg-[#277e73] hover:bg-[#1f635c] text-white font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(39,126,115,0.25)] hover:scale-[1.02] active:scale-[0.98]">
-                See more (ke web perusahaannya) &rarr;
-              </a>
-            </div>
-          </div>
-
-          <div id="card-bca" class="company-card rounded-2xl bg-white border border-[#277e73]/20 overflow-hidden shadow-xl transition-all duration-300 hover:border-[#277e73]">
-            <div class="p-5 sm:p-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 bg-[#f4fbf9]">
-              <img src="assets/logos/blu.svg" alt="Logo Blu by BCA Digital" class="h-10 w-auto" width="160" height="40">
-              <span class="text-xs font-bold uppercase tracking-wider text-[#277e73]">
-                Digital Banking
-              </span>
-            </div>
-
-            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100 group">
-              <img src="assets/images/bca-fotobersama.jpg" alt="Foto Bersama Kunjungan di Blu by BCA Digital" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="494" height="278">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0c433d]/80 via-transparent to-transparent"></div>
-              <span class="absolute bottom-3 left-4 text-xs font-semibold text-white bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">
-                Sesi Materi Bersama Pak Agung di Kantor BCA Digital
-              </span>
-            </div>
-
-            <div class="p-6 sm:p-8">
-              <p class="text-slate-700 text-base leading-relaxed mb-5">
-                BCA Digital menyediakan layanan perbankan digital dengan transaksi terintegrasi.
-              </p>
-
-              <p class="text-sm font-medium text-slate-700 mb-4">
-                <span class="text-slate-500 font-semibold">Fokus:</span> Perbankan digital · Fintech
-              </p>
-
-              <p class="text-xs text-slate-500 leading-relaxed mb-8">
-                Mengenal arsitektur sistem, keamanan cloud, dan berdiskusi dengan tim Blu.
-              </p>
-
-              <a href="https://blubybcadigital.id/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-3.5 px-5 rounded-xl bg-[#277e73] hover:bg-[#1f635c] text-white font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(39,126,115,0.25)] hover:scale-[1.02] active:scale-[0.98]">
-                See more (ke web perusahaannya) &rarr;
-              </a>
-            </div>
-          </div>
-
-        </div>
+      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 relative z-10 px-4">
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#0c433d] tracking-tight mb-3">
+          The Face We Met
+        </h2>
+        <p class="text-base sm:text-xl font-medium text-[#0c433d]">
+          Tiga tahun, empat perusahaan.
+        </p>
       </div>
-    </section>
-
-    <section id="riwayat" class="py-24 sm:py-32 relative bg-[#f8fafc] border-t border-[#277e73]/30 overflow-hidden">
-      <div class="absolute top-1/4 -left-48 w-96 h-96 bg-[#277e73]/10 rounded-full blur-[140px] pointer-events-none"></div>
-      <div class="absolute bottom-1/4 -right-48 w-96 h-96 bg-[#006749]/10 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            Evolusi &amp; Jejak Ekspedisi
-          </h2>
-          <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
-            Perjalanan HGTC dari riset komputasi dan game hingga fintech dan pendidikan teknologi.
-          </p>
-        </div>
+        <div class="relative pl-8 sm:pl-12 lg:pl-14">
+          <div class="absolute left-3.5 sm:left-4 lg:left-5 top-3 bottom-10 w-0.5 bg-[#e8b657]/45 pointer-events-none"></div>
 
-        <div class="space-y-12">
-          
-          <div class="relative rounded-3xl bg-gradient-to-b from-[#0c433d] via-[#006749] to-[#0c433d]/90 border border-[#277e73]/35 p-6 sm:p-10 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl group hover:border-[#277e73]/40 transition-all duration-300">
-            <div class="absolute top-0 left-12 right-12 h-px bg-gradient-to-r from-transparent via-[#e9b557]/50 to-transparent"></div>
-
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 mb-8 border-b border-[#277e73]/30">
-              <div class="flex items-center gap-4">
-                <div class="px-4 py-2 rounded-2xl bg-gradient-to-r from-[#277e73] to-[#e9b557] text-white font-black text-xl tracking-tight shadow-[0_0_20px_rgba(39,126,115,0.4)]">
-                  2026
-                </div>
-                <div>
-                  <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                    Dual-Hub Innovation: Fintech &amp; Talent Pipeline
-                  </h3>
-                </div>
-              </div>
+          <div class="relative mb-14 sm:mb-20">
+            <div class="absolute -left-8 sm:-left-12 lg:-left-14 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dca853] ring-4 ring-[#f3f6f4]"></div>
+            <div>
+              <h3 class="text-3xl sm:text-4xl font-extrabold text-[#0c433d] tracking-tight leading-none">2026</h3>
+              <p class="text-base sm:text-lg font-semibold text-[#0c433d] mt-1.5 mb-6">Kabinet Selaras</p>
             </div>
 
-            <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-8 max-w-4xl">
-              Kunjungan 2026 membahas perbankan digital di <strong class="text-[#e9b557] font-semibold">Blu by BCA Digital</strong> dan rekayasa software di <strong class="text-[#e9b557] font-semibold">Hacktiv8</strong>.
-            </p>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="relative rounded-2xl bg-[#006749] border border-[#277e73]/30 p-6 sm:p-7 hover:border-[#277e73]/40 transition-all duration-300 group/card">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <h4 class="text-lg sm:text-xl font-bold text-white group-hover/card:text-[#e9b557] transition-colors">
-                    Blu by BCA Digital
-                  </h4>
-                  
+              <div class="rounded-2xl sm:rounded-3xl bg-[#0c433d] p-4 sm:p-5 shadow-xl border border-[#277e73]/25 flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+                <div class="rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/10] bg-slate-900">
+                  <img src="assets/images/hacktiv8-fotobersama.jpg" alt="Hactive8" class="w-full h-full object-cover" loading="lazy">
                 </div>
-                <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-5">
-                  Mengenal microservices, keamanan transaksi, integrasi BCA, dan pengelolaan data cloud.
-                </p>
-                <div class="flex flex-wrap gap-2 pt-4 border-t border-[#277e73]/30">
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Core Banking Services</span>
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">High-Throughput API</span>
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Zero-Trust Security</span>
+                <div class="mt-4 sm:mt-5">
+                  <div class="flex items-center gap-3">
+                    <img src="assets/logos/circle-hactive8.png" alt="Hactive8 Logo" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover shrink-0">
+                    <div>
+                      <h4 class="text-base sm:text-lg font-bold text-white leading-tight">Hactive8</h4>
+                      <p class="text-[11px] sm:text-xs text-white/70 font-normal leading-tight mt-0.5">Technology Education</p>
+                    </div>
+                  </div>
+                  <p class="text-xs sm:text-[13px] text-white/90 leading-relaxed font-normal mt-3.5">
+                    Mengikuti sesi seputar Data Science, mengenal berbagai peran di bidangnya, serta memahami perjalanan pembelajaran dan peluang karier di industri teknologi.
+                  </p>
                 </div>
               </div>
 
-              <div class="relative rounded-2xl bg-[#006749] border border-[#277e73]/30 p-6 sm:p-7 hover:border-[#e9b557]/40 transition-all duration-300 group/card">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <h4 class="text-lg sm:text-xl font-bold text-white group-hover/card:text-[#e9b557] transition-colors">
-                    Hacktiv8 Indonesia
-                  </h4>
-                  
+              <div class="rounded-2xl sm:rounded-3xl bg-[#0c433d] p-4 sm:p-5 shadow-xl border border-[#277e73]/25 flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+                <div class="rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/10] bg-slate-900">
+                  <img src="assets/images/bca-fotobersama.jpg" alt="Blu by BCA" class="w-full h-full object-cover" loading="lazy">
                 </div>
-                <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-5">
-                  Membahas budaya kerja, proyek industri, CI/CD, dan kesiapan karier software engineer.
-                </p>
-                <div class="flex flex-wrap gap-2 pt-4 border-t border-[#277e73]/30">
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Modern Fullstack Stack</span>
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">CI/CD Automation</span>
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Agile Engineering</span>
+                <div class="mt-4 sm:mt-5">
+                  <div class="flex items-center gap-3">
+                    <img src="assets/logos/circle-blu.png" alt="Blu by BCA Logo" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover shrink-0">
+                    <div>
+                      <h4 class="text-base sm:text-lg font-bold text-white leading-tight">Blu by BCA</h4>
+                      <p class="text-[11px] sm:text-xs text-white/70 font-normal leading-tight mt-0.5">Digital Banking</p>
+                    </div>
+                  </div>
+                  <p class="text-xs sm:text-[13px] text-white/90 leading-relaxed font-normal mt-3.5">
+                    Mengenal dunia perbankan digital melalui penerapan teknologi, pemanfaatan data, keamanan sistem, serta keterkaitan ilmu perkuliahan dengan praktik industri.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="relative rounded-3xl bg-gradient-to-b from-[#0c433d] via-[#006749] to-[#0c433d]/90 border border-[#277e73]/35 p-6 sm:p-10 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl group hover:border-[#277e73]/40 transition-all duration-300">
-            <div class="absolute top-0 left-12 right-12 h-px bg-gradient-to-r from-transparent via-[#e9b557]/50 to-transparent"></div>
+          <div class="relative mb-14 sm:mb-20">
+            <div class="absolute -left-8 sm:-left-12 lg:-left-14 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dca853] ring-4 ring-[#f3f6f4]"></div>
+            <div>
+              <h3 class="text-3xl sm:text-4xl font-extrabold text-[#0c433d] tracking-tight leading-none">2025</h3>
+              <p class="text-base sm:text-lg font-semibold text-[#0c433d] mt-1.5 mb-6">Kabinet Sinergis</p>
+            </div>
 
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 mb-8 border-b border-[#277e73]/30">
-              <div class="flex items-center gap-4">
-                <div class="px-4 py-2 rounded-2xl bg-gradient-to-r from-[#006749] to-[#006749] text-white font-black text-xl tracking-tight shadow-[0_0_20px_rgba(12,67,61,0.4)]">
-                  2025
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="rounded-2xl sm:rounded-3xl bg-[#0c433d] p-4 sm:p-5 shadow-xl border border-[#277e73]/25 flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+                <div class="rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/10] bg-slate-900">
+                  <img src="assets/images/brin-fotobersama.webp" alt="BRIN" class="w-full h-full object-cover" loading="lazy">
                 </div>
-                <div>
-                  <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                    Deep-Tech &amp; Interactive Creative Media
-                  </h3>
+                <div class="mt-4 sm:mt-5">
+                  <div class="flex items-center gap-3">
+                    <img src="assets/logos/circle-brin.png" alt="BRIN Logo" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover shrink-0">
+                    <div>
+                      <h4 class="text-base sm:text-lg font-bold text-white leading-tight">BRIN</h4>
+                      <p class="text-[11px] sm:text-xs text-white/70 font-normal leading-tight mt-0.5">Research &amp; Innovation</p>
+                    </div>
+                  </div>
+                  <p class="text-xs sm:text-[13px] text-white/90 leading-relaxed font-normal mt-3.5">
+                    Mengenal BRIN sebagai lembaga riset nasional yang berperan dalam pengembangan ilmu pengetahuan, teknologi, dan inovasi di Indonesia.
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-8 max-w-4xl">
-              Pada 2025, peserta mengenal riset komputasi di <strong class="text-[#e9b557] font-semibold">BRIN</strong> dan produksi game di <strong class="text-[#e9b557] font-semibold">Agate Studio</strong>.
-            </p>
+          <div class="relative">
+            <div class="absolute -left-8 sm:-left-12 lg:-left-14 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dca853] ring-4 ring-[#f3f6f4]"></div>
+            <div>
+              <h3 class="text-3xl sm:text-4xl font-extrabold text-[#0c433d] tracking-tight leading-none">2024</h3>
+              <p class="text-base sm:text-lg font-semibold text-[#0c433d] mt-1.5 mb-6">Kabinet Kolaborasi</p>
+            </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="relative rounded-2xl bg-[#006749] border border-[#277e73]/30 p-6 sm:p-7 hover:border-[#e9b557]/40 transition-all duration-300 group/card">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <h4 class="text-lg sm:text-xl font-bold text-white group-hover/card:text-[#e9b557] transition-colors">
-                    BRIN (Badan Riset &amp; Inovasi Nasional)
-                  </h4>
+              <div class="rounded-2xl sm:rounded-3xl bg-[#0c433d] p-4 sm:p-5 shadow-xl border border-[#277e73]/25 flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+                <div class="rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/10] bg-slate-900">
+                  <img src="assets/images/agate-fotobersama.webp" alt="Agate" class="w-full h-full object-cover" loading="lazy">
                 </div>
-                <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-5">
-                  Mengenal HPC, sains data, genomika komputasional, dan riset terapan.
-                </p>
-                <div class="flex flex-wrap gap-2 pt-4 border-t border-[#277e73]/30">
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">High-Performance Computing</span>
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Data Science Lab</span>
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">National Tech Innovation</span>
-                </div>
-              </div>
-
-              <div class="relative rounded-2xl bg-[#006749] border border-[#277e73]/30 p-6 sm:p-7 hover:border-[#277e73]/40 transition-all duration-300 group/card">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <h4 class="text-lg sm:text-xl font-bold text-white group-hover/card:text-[#e9b557] transition-colors">
-                    Agate Studio
-                  </h4>
-                </div>
-                <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-5">
-                  Mempelajari produksi game, fisika, rendering 3D, dan simulasi.
-                </p>
-                <div class="flex flex-wrap gap-2 pt-4 border-t border-[#277e73]/30">
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Custom Game Engine</span>
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Real-Time 3D Pipeline</span>
-                  <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Interactive Simulation</span>
+                <div class="mt-4 sm:mt-5">
+                  <div class="flex items-center gap-3">
+                    <img src="assets/logos/circle-agate.png" alt="Agate Logo" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover shrink-0">
+                    <div>
+                      <h4 class="text-base sm:text-lg font-bold text-white leading-tight">Agate</h4>
+                      <p class="text-[11px] sm:text-xs text-white/70 font-normal leading-tight mt-0.5">Game Development</p>
+                    </div>
+                  </div>
+                  <p class="text-xs sm:text-[13px] text-white/90 leading-relaxed font-normal mt-3.5">
+                    Mengenal Agate sebagai perusahaan pengembang game Indonesia yang bergerak dalam industri kreatif dan teknologi digital.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1114,7 +952,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Mobile Menu Toggle
       const mobileBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       const iconOpen = document.getElementById('menu-icon-open');
@@ -1146,28 +983,6 @@
         });
       });
 
-      // 2. Company filters keep one visual state system and stable desktop card tracks.
-      const tabBtns = document.querySelectorAll('.company-tab-btn');
-      const cardHacktiv = document.getElementById('card-hacktiv8');
-      const cardBca = document.getElementById('card-bca');
-      const companyContainer = document.getElementById('company-cards-container');
-
-      tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const target = btn.dataset.target;
-          tabBtns.forEach(tab => {
-            const selected = tab === btn;
-            tab.classList.toggle('is-active', selected);
-            tab.setAttribute('aria-pressed', String(selected));
-          });
-
-          companyContainer.dataset.filter = target;
-          cardHacktiv.classList.toggle('hidden', target === 'bca');
-          cardBca.classList.toggle('hidden', target === 'hacktiv');
-        });
-      });
-
-      // 3. Animated Metric Numbers (IntersectionObserver)
       const statElements = document.querySelectorAll('.stat-counter');
       let statsAnimated = false;
 
@@ -1180,7 +995,6 @@
 
           const step = (now) => {
             const progress = Math.min((now - startTime) / duration, 1);
-            // EaseOutCubic
             const ease = 1 - Math.pow(1 - progress, 3);
             const current = ease * target;
             el.textContent = current.toFixed(decimals);
@@ -1207,7 +1021,6 @@
       const statSection = document.getElementById('statistik');
       if (statSection) statObserver.observe(statSection);
 
-      // 4. Gallery Filter
       const filterBtns = document.querySelectorAll('.gallery-filter-btn');
       const galleryItems = document.querySelectorAll('.gallery-item');
 
@@ -1232,7 +1045,6 @@
         });
       });
 
-      // 5. Gallery Lightbox Modal
       const modal = document.getElementById('lightbox-modal');
       const modalImg = document.getElementById('lightbox-img');
       const modalTitle = document.getElementById('lightbox-title');
@@ -1265,7 +1077,6 @@
         }
       });
 
-      // 6. Accordion FAQ
       const faqToggles = document.querySelectorAll('.faq-toggle');
       faqToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
@@ -1273,7 +1084,6 @@
           const chevron = toggle.querySelector('.faq-chevron');
           const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
 
-          // Close other faqs
           faqToggles.forEach(other => {
             if (other !== toggle) {
               other.setAttribute('aria-expanded', 'false');

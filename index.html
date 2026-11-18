@@ -6,13 +6,11 @@
   <title>HGTC 2026: HIMTIKA Goes to Company · Faces of the Industry</title>
   <meta name="description" content="HIMTIKA Goes to Company (HGTC) 2026: Kunjungan industri mahasiswa Informatika Universitas Singaperbangsa Karawang ke Hacktiv8 dan Blu by BCA Digital.">
   
-  <!-- Google Fonts: Plus Jakarta Sans & Zen Dots -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23277e73'/><text x='16' y='21' font-family='sans-serif' font-size='10' font-weight='900' fill='white' text-anchor='middle'>HGTC</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Zen+Dots&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -255,7 +253,6 @@
 </head>
 <body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-[#277e73]/20 selection:text-[#277e73] min-h-screen overflow-x-hidden">
 
-  <!-- Mobile Drawer Menu -->
   <div id="mobile-menu" class="fixed inset-x-0 top-[85px] bg-white/95 backdrop-blur-xl border-b border-[#277e73]/20 p-6 z-50 transform -translate-y-full transition-transform duration-300 lg:hidden shadow-2xl">
     <ul class="flex flex-col gap-4 text-sm font-semibold text-slate-700">
       <li><a href="#hero" class="mobile-link block py-2 px-3 rounded-md hover:bg-[#277e73]/10 hover:text-[#277e73]">Home</a></li>
@@ -267,17 +264,11 @@
   </div>
 
   <main>
-    <!-- ========================================== -->
-    <!-- HERO SECTION (Menyatu dengan Navbar & Side Cards) -->
-    <!-- ========================================== -->
     <section id="hero" class="relative min-h-screen flex flex-col justify-between bg-gradient-to-b from-white via-[#f4fbf9] to-[#eef4f2] px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <!-- Ambient Lighting Blobs -->
       <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#277e73]/12 rounded-full blur-[140px] pointer-events-none"></div>
       <div class="absolute top-1/3 right-1/4 translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-[#e9b557]/15 rounded-full blur-[140px] pointer-events-none"></div>
 
-      <!-- Navbar Terpadu di Atas Hero -->
       <nav id="navbar" class="w-full max-w-7xl mx-auto flex items-center justify-between h-[85px] pt-3 bg-transparent z-40 relative">
-        <!-- Brand Title with HIMTIKA Logo -->
         <a href="#hero" class="flex items-center gap-3 shrink-0 group focus:outline-none">
           <img src="assets/images/img-himtika.webp" alt="Logo HIMTIKA" class="w-9 h-9 sm:w-10 sm:h-10 object-contain">
           <span class="text-[#0c433d] text-xl sm:text-2xl font-bold tracking-tight font-sans transition-colors duration-200 group-hover:text-[#277e73]">
@@ -285,7 +276,6 @@
           </span>
         </a>
 
-        <!-- Desktop Navigation Links -->
         <div class="hidden lg:flex items-center gap-8 shrink-0">
           <ul class="flex items-center gap-7 text-[15px] font-semibold text-slate-800">
             <li>
@@ -306,7 +296,6 @@
           </ul>
         </div>
 
-        <!-- Mobile Menu Button (Hamburger) -->
         <div class="flex lg:hidden shrink-0">
           <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-700 hover:text-[#277e73] hover:bg-slate-200/50 transition-colors" aria-label="Buka menu navigasi" aria-expanded="false">
             <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -319,40 +308,32 @@
         </div>
       </nav>
 
-      <!-- Main Content with 3D Cards Left & Right -->
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex-1 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-6 py-6">
         
-        <!-- Samping Kiri Hero: Card Blu by BCA Digital -->
         <div class="hidden lg:flex flex-col items-center justify-center shrink-0 w-64 xl:w-72 select-none z-10">
           <div class="hero-3d-left w-full flex flex-col items-center">
             <img src="assets/logos/blu-3d.svg" alt="3D Blu by BCA Digital Logo" class="w-64 xl:w-72 h-auto" width="380" height="380">
           </div>
         </div>
 
-        <!-- Bagian Tengah Hero: Konten Utama & Headline -->
         <div class="flex-1 text-center max-w-2xl mx-auto">
-          <!-- Subjudul kecil (Kepanjangan HGTC) -->
           <p class="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#277e73] mb-3">
             HIMTIKA GOES TO COMPANY
           </p>
 
-          <!-- Judul Besar -->
           <h1 class="text-4xl sm:text-6xl lg:text-[4.25rem] font-extrabold tracking-tight text-[#0c433d] leading-[1.1] mb-4">
             Faces of the<br>
             <span class="text-[#277e73]">Industry</span>
           </h1>
 
-          <!-- Tagline -->
           <p class="text-lg sm:text-xl lg:text-2xl text-slate-600 font-light max-w-xl mx-auto mb-4 leading-relaxed">
             Learn from the best at the source.
           </p>
 
-          <!-- Deskripsi Kunjungan -->
           <p class="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto mb-8 leading-relaxed">
             Kunjungan industri HIMTIKA FASILKOM UNSIKA untuk mengenal dunia profesional, penerapan teknologi, dan budaya kerja secara langsung.
           </p>
 
-          <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-600">
             <a href="#dokumentasi" class="px-7 py-3 rounded-xl bg-[#e9b557] hover:bg-[#d9a443] text-[#0c433d] font-bold text-sm tracking-wide transition-all shadow-[0_4px_14px_rgba(12,67,61,0.18)] hover:scale-[1.03] active:scale-[0.98]">
               View documentation
@@ -362,7 +343,6 @@
             </a>
           </div>
 
-          <!-- Mobile Cards -->
           <div class="hero-mobile-logos grid grid-cols-2 gap-3 sm:gap-6 mt-8 lg:hidden" aria-label="Perusahaan yang dikunjungi">
             <div class="hero-mobile-logo hero-mobile-logo-left">
               <img src="assets/logos/blu-3d.svg" alt="Blu by BCA Digital" width="380" height="380" loading="eager">
@@ -373,7 +353,6 @@
           </div>
         </div>
 
-        <!-- Samping Kanan Hero: Card Hacktiv8 -->
         <div class="hidden lg:flex flex-col items-center justify-center shrink-0 w-64 xl:w-72 select-none z-10">
           <div class="hero-3d-right w-full flex flex-col items-center">
             <img src="assets/logos/hacktiv8-3d.svg" alt="3D Hacktiv8 Logo" class="w-64 xl:w-72 h-auto" width="380" height="380">
@@ -382,75 +361,117 @@
 
       </div>
 
-      <!-- Spacer bawah penyeimbang vertikal -->
       <div class="h-6 hidden sm:block"></div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SECTION 1: PENGENALAN HGTC (Behind The Visit) -->
-    <!-- ========================================== -->
-    <section id="tentang" class="py-24 relative border-t border-[#277e73]/15 bg-white">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0c433d] mb-3">
-            Behind The Visit
-          </h2>
-          <p class="text-slate-600 text-base sm:text-lg">
-            Tujuan kunjungan industri HIMTIKA.
-          </p>
-        </div>
-
-        <div class="max-w-4xl mx-auto my-14 pl-6 sm:pl-8 border-l-2 border-[#277e73]">
-          <p class="text-xl sm:text-2xl text-[#0c433d] font-normal leading-relaxed">
-            HGTC mengajak mahasiswa Informatika mengenal teknologi dan budaya kerja langsung di perusahaan.
-          </p>
-          <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#277e73]">
-            HIMTIKA · FASILKOM UNSIKA
-          </p>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3 sm:gap-5 max-w-4xl mx-auto my-10">
-          <figure class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#0c433d]">
-            <img src="assets/images/hacktiv8-sambutan.jpg" alt="Peserta menyimak sesi sambutan di Hacktiv8" class="w-full h-full object-cover" width="550" height="365" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0c433d]/90 via-transparent to-transparent"></div>
-            <figcaption class="absolute inset-x-0 bottom-0 p-3 sm:p-4 text-sm sm:text-base font-semibold text-white">Kunjungan Hacktiv8</figcaption>
-          </figure>
-          <figure class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#0c433d]">
-            <img src="assets/images/bca-perjalanan.jpg" alt="Peserta berjalan menuju lokasi kunjungan BCA Digital" class="w-full h-full object-cover" width="508" height="381" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0c433d]/90 via-transparent to-transparent"></div>
-            <figcaption class="absolute inset-x-0 bottom-0 p-3 sm:p-4 text-sm sm:text-base font-semibold text-white">Perjalanan ke BCA Digital</figcaption>
-          </figure>
-        </div>
-
-        <!-- Three benefits from the industry visit -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-10 border-t border-slate-200">
-          <div>
-            <h3 class="text-lg font-bold text-[#0c433d] mb-2">Industrial Exposure</h3>
-            <p class="text-base text-slate-600 leading-relaxed">
-              Mengamati layanan perbankan digital dan proses belajar di bootcamp teknologi.
+    <section id="tentang" class="relative min-h-screen flex flex-col justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden z-20 bg-[#0c433d] bg-no-repeat bg-bottom bg-cover" style="background-image: url('assets/images/bg-behind-visit.webp'); clip-path: polygon(0 0, 100% 45px, 100% 100%, 0 100%); margin-top: -45px;">
+      
+      <div class="relative z-20 max-w-7xl mx-auto w-full">
+        <div class="flex items-start justify-between gap-6 mb-12 sm:mb-16">
+          <div class="max-w-3xl">
+            <p class="text-sm sm:text-base font-semibold mb-3 tracking-wide">
+              <span class="text-[#e9b557]">3 Juli 2026,</span> <span class="text-[#e2ece9]">sehari melihat lebih jauh dari ruang kelas.</span>
             </p>
+
+            <h2 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-8">
+              Behind The Visit
+            </h2>
+
+            <div class="border-l-[3px] border-[#e9b557] pl-4 sm:pl-5 max-w-xl">
+              <p class="text-sm sm:text-base text-[#d7e7e2] leading-relaxed font-normal">
+                HGTC merupakan kegiatan kunjungan industri HIMTIKA yang mengajak mahasiswa Informatika mengenal dunia profesional, penerapan teknologi, dan budaya kerja secara langsung.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <h3 class="text-lg font-bold text-[#0c433d] mb-2">Culture &amp; Agility</h3>
-            <p class="text-base text-slate-600 leading-relaxed">
-              Melihat cara tim mengembangkan produk bersama.
-            </p>
+          <div class="shrink-0 hidden sm:block text-[#7d9972] opacity-80 select-none pt-4" aria-hidden="true">
+            <svg class="w-16 h-16 lg:w-20 lg:h-20 fill-current" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
+          <div class="bg-[#0c433d]/50 backdrop-blur-md border border-[#277e73]/40 rounded-2xl sm:rounded-3xl py-6 sm:py-8 lg:py-10 px-4 sm:px-6 min-h-[140px] sm:min-h-[165px] lg:min-h-[180px] text-center flex flex-col items-center justify-center shadow-lg transition-transform hover:-translate-y-1">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e9b557] mb-2 sm:mb-2.5 tracking-tight">50+</span>
+            <p class="text-xs sm:text-sm lg:text-[15px] font-semibold text-white/95 leading-snug">Jumlah Peserta</p>
           </div>
 
-          <div>
-            <h3 class="text-lg font-bold text-[#0c433d] mb-2">Career Readiness</h3>
-            <p class="text-base text-slate-600 leading-relaxed">
-              Menghubungkan materi kuliah dengan pekerjaan teknologi.
-            </p>
+          <div class="bg-[#0c433d]/50 backdrop-blur-md border border-[#277e73]/40 rounded-2xl sm:rounded-3xl py-6 sm:py-8 lg:py-10 px-4 sm:px-6 min-h-[140px] sm:min-h-[165px] lg:min-h-[180px] text-center flex flex-col items-center justify-center shadow-lg transition-transform hover:-translate-y-1">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e9b557] mb-2 sm:mb-2.5 tracking-tight">92,5%</span>
+            <p class="text-xs sm:text-sm lg:text-[15px] font-semibold text-white/95 leading-snug">Peserta merasa puas</p>
+          </div>
+
+          <div class="bg-[#0c433d]/50 backdrop-blur-md border border-[#277e73]/40 rounded-2xl sm:rounded-3xl py-6 sm:py-8 lg:py-10 px-4 sm:px-6 min-h-[140px] sm:min-h-[165px] lg:min-h-[180px] text-center flex flex-col items-center justify-center shadow-lg transition-transform hover:-translate-y-1">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e9b557] mb-2 sm:mb-2.5 tracking-tight">90%</span>
+            <p class="text-xs sm:text-sm lg:text-[15px] font-semibold text-white/95 leading-snug">Acara sesuai ekspektasi</p>
+          </div>
+
+          <div class="bg-[#0c433d]/50 backdrop-blur-md border border-[#277e73]/40 rounded-2xl sm:rounded-3xl py-6 sm:py-8 lg:py-10 px-4 sm:px-6 min-h-[140px] sm:min-h-[165px] lg:min-h-[180px] text-center flex flex-col items-center justify-center shadow-lg transition-transform hover:-translate-y-1">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#e9b557] mb-2 sm:mb-2.5 tracking-tight">95%</span>
+            <p class="text-xs sm:text-sm lg:text-[15px] font-semibold text-white/95 leading-snug">Susunan acara dinilai baik</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SECTION 2: PROFIL PERUSAHAAN (Two Worlds, One Industry) -->
-    <!-- ========================================== -->
+    <section id="learn" class="py-20 sm:py-28 relative bg-[#f3f6f4] overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="relative text-center max-w-2xl sm:max-w-3xl mx-auto mb-12 sm:mb-16">
+          <img src="assets/images/sparkle-left.png" alt="" class="absolute -left-3 sm:-left-12 lg:-left-20 top-1/2 -translate-y-1/2 w-10 sm:w-16 lg:w-20 h-auto pointer-events-none select-none" aria-hidden="true">
+          <img src="assets/images/sparkle-right.png" alt="" class="absolute -right-1 sm:right-6 lg:right-12 -top-2 sm:-top-3 w-5 sm:w-7 h-auto pointer-events-none select-none" aria-hidden="true">
+          
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#0c433d] tracking-tight mb-3">
+            What HGTC Aims For
+          </h2>
+          <p class="text-base sm:text-xl font-medium text-[#0c433d]">
+            Tiga hal yang kami cari di sana.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
+            <img src="assets/images/learn-career.webp" alt="Career Inspiration" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end text-left">
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug tracking-tight">
+                Career Inspiration
+              </h3>
+              <p class="text-xs sm:text-sm text-white/90 leading-relaxed font-normal">
+                Mendapatkan inspirasi untuk mengenali potensi dan menentukan arah karier di bidang teknologi.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
+            <img src="assets/images/learn-professional.webp" alt="Professional Links" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end text-left">
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug tracking-tight">
+                Professional Links
+              </h3>
+              <p class="text-xs sm:text-sm text-white/90 leading-relaxed font-normal">
+                Membuka kesempatan untuk berinteraksi, bertukar wawasan, dan membangun relasi dengan para profesional industri.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
+            <img src="assets/images/learn-industry.webp" alt="Industry Insights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end text-left">
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug tracking-tight">
+                Industry Insights
+              </h3>
+              <p class="text-xs sm:text-sm text-white/90 leading-relaxed font-normal">
+                Mengenal lingkungan profesional serta memahami penerapan ilmu Informatika dalam dunia kerja.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="perusahaan" class="py-24 relative bg-[#f8fafc]">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-14">
@@ -462,7 +483,6 @@
           </p>
         </div>
 
-        <!-- Company filter: the first option spans both columns on small screens. -->
         <div class="flex justify-center mb-10 sm:mb-12">
           <div class="grid w-full max-w-[560px] grid-cols-3 gap-1.5 p-1.5 rounded-2xl bg-white border border-slate-200 shadow-md sm:inline-flex sm:w-auto sm:grid-cols-none sm:gap-1">
             <button id="tab-all-btn" type="button" class="company-tab-btn is-active min-w-0 min-h-[54px] sm:min-h-[44px] px-1 sm:px-5 py-2.5 rounded-xl text-center text-xs leading-tight sm:text-sm font-semibold transition-all duration-200" data-target="all" aria-pressed="true">
@@ -477,12 +497,9 @@
           </div>
         </div>
 
-        <!-- Company Cards Grid -->
         <div id="company-cards-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8" data-filter="all">
           
-          <!-- PERUSAHAAN 1: HACKTIV8 -->
           <div id="card-hacktiv8" class="company-card rounded-2xl bg-white border border-[#277e73]/20 overflow-hidden shadow-xl transition-all duration-300 hover:border-[#277e73]">
-            <!-- Card Brand Row -->
             <div class="p-5 sm:p-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 bg-[#f4fbf9]">
               <div class="rounded-lg bg-[#0c433d] px-2.5 py-1.5 ring-1 ring-[#0c433d]/10">
                 <img src="assets/logos/hacktiv8_official.png" alt="Logo Hacktiv8" class="block w-[168px] sm:w-[180px] h-auto" width="2995" height="660">
@@ -492,7 +509,6 @@
               </span>
             </div>
 
-            <!-- Card Image -->
             <div class="relative aspect-[4/3] overflow-hidden bg-slate-100 group">
               <img src="assets/images/hacktiv8-fotobersama.jpg" alt="Foto Bersama Kunjungan di Hacktiv8" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="553" height="311">
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c433d]/80 via-transparent to-transparent"></div>
@@ -501,32 +517,26 @@
               </span>
             </div>
 
-            <!-- Card Body Content -->
             <div class="p-6 sm:p-8">
               <p class="text-slate-700 text-base leading-relaxed mb-5">
                 Hacktiv8 berfokus pada coding bootcamp dan pengembangan talenta digital.
               </p>
 
-              <!-- Focus Line -->
               <p class="text-sm font-medium text-slate-700 mb-4">
                 <span class="text-slate-500 font-semibold">Fokus:</span> Coding · Talenta digital
               </p>
 
-              <!-- Topic Description -->
               <p class="text-xs text-slate-500 leading-relaxed mb-8">
                 Membahas kurikulum coding, portofolio kerja, dan tanya jawab bersama mentor.
               </p>
 
-              <!-- External Action Link -->
               <a href="https://www.hacktiv8.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-3.5 px-5 rounded-xl bg-[#277e73] hover:bg-[#1f635c] text-white font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(39,126,115,0.25)] hover:scale-[1.02] active:scale-[0.98]">
                 See more (ke web perusahaannya) &rarr;
               </a>
             </div>
           </div>
 
-          <!-- PERUSAHAAN 2: BLU BY BCA DIGITAL -->
           <div id="card-bca" class="company-card rounded-2xl bg-white border border-[#277e73]/20 overflow-hidden shadow-xl transition-all duration-300 hover:border-[#277e73]">
-            <!-- Card Brand Row -->
             <div class="p-5 sm:p-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 bg-[#f4fbf9]">
               <img src="assets/logos/blu.svg" alt="Logo Blu by BCA Digital" class="h-10 w-auto" width="160" height="40">
               <span class="text-xs font-bold uppercase tracking-wider text-[#277e73]">
@@ -534,7 +544,6 @@
               </span>
             </div>
 
-            <!-- Card Image -->
             <div class="relative aspect-[4/3] overflow-hidden bg-slate-100 group">
               <img src="assets/images/bca-fotobersama.jpg" alt="Foto Bersama Kunjungan di Blu by BCA Digital" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="494" height="278">
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c433d]/80 via-transparent to-transparent"></div>
@@ -543,23 +552,19 @@
               </span>
             </div>
 
-            <!-- Card Body Content -->
             <div class="p-6 sm:p-8">
               <p class="text-slate-700 text-base leading-relaxed mb-5">
                 BCA Digital menyediakan layanan perbankan digital dengan transaksi terintegrasi.
               </p>
 
-              <!-- Focus Line -->
               <p class="text-sm font-medium text-slate-700 mb-4">
                 <span class="text-slate-500 font-semibold">Fokus:</span> Perbankan digital · Fintech
               </p>
 
-              <!-- Topic Description -->
               <p class="text-xs text-slate-500 leading-relaxed mb-8">
                 Mengenal arsitektur sistem, keamanan cloud, dan berdiskusi dengan tim Blu.
               </p>
 
-              <!-- External Action Link -->
               <a href="https://blubybcadigital.id/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-3.5 px-5 rounded-xl bg-[#277e73] hover:bg-[#1f635c] text-white font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(39,126,115,0.25)] hover:scale-[1.02] active:scale-[0.98]">
                 See more (ke web perusahaannya) &rarr;
               </a>
@@ -570,16 +575,11 @@
       </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SECTION 3: RIWAYAT JEJAK (Our Industry Footprints) -->
-    <!-- ========================================== -->
     <section id="riwayat" class="py-24 sm:py-32 relative bg-[#f8fafc] border-t border-[#277e73]/30 overflow-hidden">
-      <!-- Ambient Lighting Blobs -->
       <div class="absolute top-1/4 -left-48 w-96 h-96 bg-[#277e73]/10 rounded-full blur-[140px] pointer-events-none"></div>
       <div class="absolute bottom-1/4 -right-48 w-96 h-96 bg-[#006749]/10 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
             Evolusi &amp; Jejak Ekspedisi
@@ -589,15 +589,11 @@
           </p>
         </div>
 
-        <!-- Bento Journey Showcase Container -->
         <div class="space-y-12">
           
-          <!-- CHAPTER 1: 2026 INNOVATION ERA -->
           <div class="relative rounded-3xl bg-gradient-to-b from-[#0c433d] via-[#006749] to-[#0c433d]/90 border border-[#277e73]/35 p-6 sm:p-10 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl group hover:border-[#277e73]/40 transition-all duration-300">
-            <!-- Subtle Top Accent Glow -->
             <div class="absolute top-0 left-12 right-12 h-px bg-gradient-to-r from-transparent via-[#e9b557]/50 to-transparent"></div>
 
-            <!-- Chapter Header -->
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 mb-8 border-b border-[#277e73]/30">
               <div class="flex items-center gap-4">
                 <div class="px-4 py-2 rounded-2xl bg-gradient-to-r from-[#277e73] to-[#e9b557] text-white font-black text-xl tracking-tight shadow-[0_0_20px_rgba(39,126,115,0.4)]">
@@ -611,14 +607,11 @@
               </div>
             </div>
 
-            <!-- Chapter Narrative -->
             <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-8 max-w-4xl">
               Kunjungan 2026 membahas perbankan digital di <strong class="text-[#e9b557] font-semibold">Blu by BCA Digital</strong> dan rekayasa software di <strong class="text-[#e9b557] font-semibold">Hacktiv8</strong>.
             </p>
 
-            <!-- Dual Bento Pillars Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <!-- Destination 1: Blu by BCA Digital -->
               <div class="relative rounded-2xl bg-[#006749] border border-[#277e73]/30 p-6 sm:p-7 hover:border-[#277e73]/40 transition-all duration-300 group/card">
                 <div class="flex items-center justify-between gap-2 mb-3">
                   <h4 class="text-lg sm:text-xl font-bold text-white group-hover/card:text-[#e9b557] transition-colors">
@@ -629,7 +622,6 @@
                 <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-5">
                   Mengenal microservices, keamanan transaksi, integrasi BCA, dan pengelolaan data cloud.
                 </p>
-                <!-- Key Technology Pillars -->
                 <div class="flex flex-wrap gap-2 pt-4 border-t border-[#277e73]/30">
                   <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Core Banking Services</span>
                   <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">High-Throughput API</span>
@@ -637,7 +629,6 @@
                 </div>
               </div>
 
-              <!-- Destination 2: Hacktiv8 -->
               <div class="relative rounded-2xl bg-[#006749] border border-[#277e73]/30 p-6 sm:p-7 hover:border-[#e9b557]/40 transition-all duration-300 group/card">
                 <div class="flex items-center justify-between gap-2 mb-3">
                   <h4 class="text-lg sm:text-xl font-bold text-white group-hover/card:text-[#e9b557] transition-colors">
@@ -648,7 +639,6 @@
                 <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-5">
                   Membahas budaya kerja, proyek industri, CI/CD, dan kesiapan karier software engineer.
                 </p>
-                <!-- Key Technology Pillars -->
                 <div class="flex flex-wrap gap-2 pt-4 border-t border-[#277e73]/30">
                   <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Modern Fullstack Stack</span>
                   <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">CI/CD Automation</span>
@@ -658,12 +648,9 @@
             </div>
           </div>
 
-          <!-- CHAPTER 2: 2025 FOUNDATION MILESTONE -->
           <div class="relative rounded-3xl bg-gradient-to-b from-[#0c433d] via-[#006749] to-[#0c433d]/90 border border-[#277e73]/35 p-6 sm:p-10 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl group hover:border-[#277e73]/40 transition-all duration-300">
-            <!-- Subtle Top Accent Glow -->
             <div class="absolute top-0 left-12 right-12 h-px bg-gradient-to-r from-transparent via-[#e9b557]/50 to-transparent"></div>
 
-            <!-- Chapter Header -->
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 mb-8 border-b border-[#277e73]/30">
               <div class="flex items-center gap-4">
                 <div class="px-4 py-2 rounded-2xl bg-gradient-to-r from-[#006749] to-[#006749] text-white font-black text-xl tracking-tight shadow-[0_0_20px_rgba(12,67,61,0.4)]">
@@ -677,14 +664,11 @@
               </div>
             </div>
 
-            <!-- Chapter Narrative -->
             <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-8 max-w-4xl">
               Pada 2025, peserta mengenal riset komputasi di <strong class="text-[#e9b557] font-semibold">BRIN</strong> dan produksi game di <strong class="text-[#e9b557] font-semibold">Agate Studio</strong>.
             </p>
 
-            <!-- Dual Bento Pillars Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <!-- Destination 1: BRIN -->
               <div class="relative rounded-2xl bg-[#006749] border border-[#277e73]/30 p-6 sm:p-7 hover:border-[#e9b557]/40 transition-all duration-300 group/card">
                 <div class="flex items-center justify-between gap-2 mb-3">
                   <h4 class="text-lg sm:text-xl font-bold text-white group-hover/card:text-[#e9b557] transition-colors">
@@ -694,7 +678,6 @@
                 <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-5">
                   Mengenal HPC, sains data, genomika komputasional, dan riset terapan.
                 </p>
-                <!-- Key Technology Pillars -->
                 <div class="flex flex-wrap gap-2 pt-4 border-t border-[#277e73]/30">
                   <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">High-Performance Computing</span>
                   <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Data Science Lab</span>
@@ -702,7 +685,6 @@
                 </div>
               </div>
 
-              <!-- Destination 2: Agate Studio -->
               <div class="relative rounded-2xl bg-[#006749] border border-[#277e73]/30 p-6 sm:p-7 hover:border-[#277e73]/40 transition-all duration-300 group/card">
                 <div class="flex items-center justify-between gap-2 mb-3">
                   <h4 class="text-lg sm:text-xl font-bold text-white group-hover/card:text-[#e9b557] transition-colors">
@@ -712,7 +694,6 @@
                 <p class="text-sm sm:text-base text-slate-100 leading-relaxed mb-5">
                   Mempelajari produksi game, fisika, rendering 3D, dan simulasi.
                 </p>
-                <!-- Key Technology Pillars -->
                 <div class="flex flex-wrap gap-2 pt-4 border-t border-[#277e73]/30">
                   <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Custom Game Engine</span>
                   <span class="text-[11px] font-medium text-slate-300 bg-[#0c433d] px-2.5 py-1 rounded-md border border-[#277e73]/40">Real-Time 3D Pipeline</span>
@@ -726,9 +707,6 @@
       </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SECTION 4: STATISTIK (HGTC in Perspective) -->
-    <!-- ========================================== -->
     <section id="statistik" class="py-24 relative bg-[#f8fafc]">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
@@ -740,9 +718,7 @@
           </p>
         </div>
 
-        <!-- Animated Numbers Counter Grid (Data Riil LPJ Lampiran 9) -->
         <div class="statistics-grid grid grid-cols-1 gap-4 sm:gap-6 mb-12 sm:mb-16">
-          <!-- Metric 1: Jumlah Peserta -->
           <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#006749]/60 to-[#0c433d]/80 border border-[#277e73]/30 text-center hover:border-[#277e73]/40 transition-colors">
             <div class="text-4xl sm:text-5xl font-extrabold text-[#e9b557] mb-2 flex items-center justify-center">
               <span class="stat-counter" data-target="40">0</span>
@@ -755,7 +731,6 @@
             </p>
           </div>
 
-          <!-- Metric 2: Tingkat Kepuasan -->
           <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#006749]/60 to-[#0c433d]/80 border border-[#277e73]/30 text-center hover:border-[#277e73]/40 transition-colors">
             <div class="text-4xl sm:text-5xl font-extrabold text-[#e9b557] mb-2 flex items-center justify-center">
               <span class="stat-counter" data-target="92.5" data-decimals="1">0</span>%
@@ -768,7 +743,6 @@
             </p>
           </div>
 
-          <!-- Metric 3: Kesesuaian Ekspektasi -->
           <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#1C1412]/60 to-[#0c433d]/80 border border-[#277e73]/30 text-center hover:border-[#e9b557]/40 transition-colors">
             <div class="text-4xl sm:text-5xl font-extrabold text-[#e9b557] mb-2 flex items-center justify-center">
               <span class="stat-counter" data-target="90.0" data-decimals="1">0</span>%
@@ -781,7 +755,6 @@
             </p>
           </div>
 
-          <!-- Metric 4: Kualitas Susunan Acara -->
           <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#1C1412]/60 to-[#0c433d]/80 border border-[#277e73]/30 text-center hover:border-[#e9b557]/40 transition-colors">
             <div class="text-4xl sm:text-5xl font-extrabold text-[#e9b557] mb-2 flex items-center justify-center">
               <span class="stat-counter" data-target="95.0" data-decimals="1">0</span>%
@@ -795,7 +768,6 @@
           </div>
         </div>
 
-        <!-- Feedback & Komentar Positif Peserta Evaluasi LPJ -->
         <div class="mt-12">
           <h3 class="text-xl font-bold text-[#0c433d] mb-6">
             Tanggapan Peserta
@@ -832,9 +804,6 @@
       </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SECTION 5: DOKUMENTASI (Moments from The Field) -->
-    <!-- ========================================== -->
     <section id="dokumentasi" class="py-24 relative bg-[#0c433d] border-t border-[#277e73]/30">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-12">
@@ -846,7 +815,6 @@
           </p>
         </div>
 
-        <!-- Filter Gallery Buttons -->
         <div class="flex justify-center mb-10">
           <div class="inline-flex p-1 rounded-xl bg-[#0c433d] border border-[#277e73]/30 text-xs font-semibold">
             <button type="button" class="gallery-filter-btn px-4 py-2 rounded-lg bg-[#277e73] text-white font-bold transition-all" data-filter="all">
@@ -861,10 +829,8 @@
           </div>
         </div>
 
-        <!-- Photos Grid with Real Authentic Images -->
         <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           
-          <!-- Foto 1: Hacktiv8 Berangkat -->
           <div class="gallery-item group relative rounded-xl overflow-hidden bg-[#0c433d] border border-[#277e73]/30 hover:border-[#e9b557]/50 transition-all cursor-pointer" data-category="hacktiv8" data-title="Pemberangkatan Peserta ke Hacktiv8" data-src="assets/images/hacktiv8-berangkat.jpg">
             <div class="relative aspect-[4/3] overflow-hidden">
               <img src="assets/images/hacktiv8-berangkat.jpg" alt="Pemberangkatan Peserta ke Hacktiv8" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="eager" width="501" height="333">
@@ -875,7 +841,6 @@
             </div>
           </div>
 
-          <!-- Foto 2: Hacktiv8 Registrasi -->
           <div class="gallery-item group relative rounded-xl overflow-hidden bg-[#0c433d] border border-[#277e73]/30 hover:border-[#e9b557]/50 transition-all cursor-pointer" data-category="hacktiv8" data-title="Registrasi Peserta di Kantor Hacktiv8" data-src="assets/images/hacktiv8-registrasi.jpg">
             <div class="relative aspect-[4/3] overflow-hidden">
               <img src="assets/images/hacktiv8-registrasi.jpg" alt="Registrasi Peserta di Kantor Hacktiv8" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="516" height="343">
@@ -886,7 +851,6 @@
             </div>
           </div>
 
-          <!-- Foto 3: Hacktiv8 Sesi Materi -->
           <div class="gallery-item group relative rounded-xl overflow-hidden bg-[#0c433d] border border-[#277e73]/30 hover:border-[#e9b557]/50 transition-all cursor-pointer" data-category="hacktiv8" data-title="Sesi Materi &amp; Sharing Bootcamp Hacktiv8" data-src="assets/images/hacktiv8-materi.jpg">
             <div class="relative aspect-[4/3] overflow-hidden">
               <img src="assets/images/hacktiv8-materi.jpg" alt="Sesi Materi di Hacktiv8" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="522" height="294">
@@ -897,7 +861,6 @@
             </div>
           </div>
 
-          <!-- Foto 4: Hacktiv8 Foto Bersama -->
           <div class="gallery-item group relative rounded-xl overflow-hidden bg-[#0c433d] border border-[#277e73]/30 hover:border-[#e9b557]/50 transition-all cursor-pointer" data-category="hacktiv8" data-title="Foto Bersama Peserta HGTC di Hacktiv8" data-src="assets/images/hacktiv8-fotobersama.jpg">
             <div class="relative aspect-[4/3] overflow-hidden">
               <img src="assets/images/hacktiv8-fotobersama.jpg" alt="Foto Bersama di Hacktiv8" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="553" height="311">
@@ -908,7 +871,6 @@
             </div>
           </div>
 
-          <!-- Foto 5: BCA Sambutan Perusahaan -->
           <div class="gallery-item group relative rounded-xl overflow-hidden bg-[#0c433d] border border-[#277e73]/30 hover:border-[#277e73]/50 transition-all cursor-pointer" data-category="bca" data-title="Sambutan dari Manajemen Blu by BCA Digital" data-src="assets/images/bca-sambutan-perusahaan.jpg">
             <div class="relative aspect-[4/3] overflow-hidden">
               <img src="assets/images/bca-sambutan-perusahaan.jpg" alt="Sambutan Perwakilan Blu by BCA Digital" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="578" height="384">
@@ -919,7 +881,6 @@
             </div>
           </div>
 
-          <!-- Foto 6: BCA Sesi Materi Pak Agung -->
           <div class="gallery-item group relative rounded-xl overflow-hidden bg-[#0c433d] border border-[#277e73]/30 hover:border-[#277e73]/50 transition-all cursor-pointer" data-category="bca" data-title="Pemaparan Materi Teknologi Bersama Pak Agung" data-src="assets/images/bca-materi-agung.jpg">
             <div class="relative aspect-[4/3] overflow-hidden">
               <img src="assets/images/bca-materi-agung.jpg" alt="Sesi Materi Bersama Pak Agung di Blu by BCA Digital" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="573" height="322">
@@ -930,7 +891,6 @@
             </div>
           </div>
 
-          <!-- Foto 7: BCA Tanya Jawab -->
           <div class="gallery-item group relative rounded-xl overflow-hidden bg-[#0c433d] border border-[#277e73]/30 hover:border-[#277e73]/50 transition-all cursor-pointer" data-category="bca" data-title="Sesi Tanya Jawab Interaktif Mahasiswa" data-src="assets/images/bca-tanyajawab.jpg">
             <div class="relative aspect-[4/3] overflow-hidden">
               <img src="assets/images/bca-tanyajawab.jpg" alt="Sesi Tanya Jawab di Blu by BCA Digital" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="486" height="323">
@@ -941,7 +901,6 @@
             </div>
           </div>
 
-          <!-- Foto 8: BCA Foto Bersama -->
           <div class="gallery-item group relative rounded-xl overflow-hidden bg-[#0c433d] border border-[#277e73]/30 hover:border-[#277e73]/50 transition-all cursor-pointer" data-category="bca" data-title="Foto Bersama Peserta HGTC di Blu by BCA Digital" data-src="assets/images/bca-fotobersama.jpg">
             <div class="relative aspect-[4/3] overflow-hidden">
               <img src="assets/images/bca-fotobersama.jpg" alt="Foto Bersama di Blu by BCA Digital" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="494" height="278">
@@ -952,7 +911,6 @@
             </div>
           </div>
 
-          <!-- Foto 9: Fun Game di BCA -->
           <div class="gallery-item group relative rounded-xl overflow-hidden bg-[#0c433d] border border-[#277e73]/30 hover:border-[#277e73]/50 transition-all cursor-pointer" data-category="bca" data-title="Fun Game &amp; Ice Breaking di Blu by BCA Digital" data-src="assets/images/bca-fungame.jpg">
             <div class="relative aspect-[4/3] overflow-hidden">
               <img src="assets/images/bca-fungame.jpg" alt="Fun Game di Blu by BCA Digital" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="475" height="316">
@@ -967,9 +925,6 @@
       </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SECTION 6: FAQ (Still Curious About HGTC?) -->
-    <!-- ========================================== -->
     <section id="faq" class="py-24 relative bg-[#f8fafc]">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
@@ -981,9 +936,7 @@
           </p>
         </div>
 
-        <!-- Accordion FAQ -->
         <div class="space-y-4">
-          <!-- FAQ 1 -->
           <div class="faq-item rounded-xl bg-[#0c433d]/80 border border-[#277e73]/30 overflow-hidden">
             <button type="button" class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white hover:text-[#e9b557] transition-colors" aria-expanded="false">
               <span>Apa itu program HIMTIKA Goes to Company (HGTC)?</span>
@@ -996,7 +949,6 @@
             </div>
           </div>
 
-          <!-- FAQ 2 -->
           <div class="faq-item rounded-xl bg-[#0c433d]/80 border border-[#277e73]/30 overflow-hidden">
             <button type="button" class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white hover:text-[#e9b557] transition-colors" aria-expanded="false">
               <span>Siapa saja sasaran peserta yang dapat mengikuti kegiatan HGTC?</span>
@@ -1009,7 +961,6 @@
             </div>
           </div>
 
-          <!-- FAQ 3 -->
           <div class="faq-item rounded-xl bg-[#0c433d]/80 border border-[#277e73]/30 overflow-hidden">
             <button type="button" class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white hover:text-[#e9b557] transition-colors" aria-expanded="false">
               <span>Bagaimana kriteria pemilihan perusahaan yang dikunjungi setiap tahunnya?</span>
@@ -1022,7 +973,6 @@
             </div>
           </div>
 
-          <!-- FAQ 4 -->
           <div class="faq-item rounded-xl bg-[#0c433d]/80 border border-[#277e73]/30 overflow-hidden">
             <button type="button" class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white hover:text-[#e9b557] transition-colors" aria-expanded="false">
               <span>Apa luaran atau output yang diharapkan setelah kegiatan kunjungan berakhir?</span>
@@ -1039,15 +989,10 @@
     </section>
   </main>
 
-  <!-- ========================================== -->
-  <!-- FOOTER RESMI (Struktur Identik CnC HIMTIKA UNSIKA) -->
-  <!-- ========================================== -->
   <footer class="w-full max-w-none box-border bg-[#0c433d] border-t border-[#277e73]/35 text-slate-400 pt-9 pb-10 md:pt-14 md:pb-9 lg:pt-[72px] lg:pb-10 lg:px-[75px] transition-all duration-500">
     <div class="max-w-[1440px] mx-auto px-5 sm:px-12 lg:px-0">
-      <!-- Footer Main Row -->
       <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start mt-4">
 
-        <!-- Brand & Address Column -->
         <div class="w-full lg:w-[32%] mb-8 lg:mb-0">
           <div class="flex flex-col items-center lg:items-start gap-4">
             <a href="#hero" class="inline-block hover:scale-105 transition-transform" title="HGTC">
@@ -1058,7 +1003,6 @@
             </p>
           </div>
 
-          <!-- Social Media Icons -->
           <div class="flex items-center justify-between lg:justify-start gap-3 w-full max-w-[250px] mx-auto lg:mx-0 mt-4 lg:mt-5">
             <a href="https://www.instagram.com/himtika_unsika/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-[#0c433d] border border-[#277e73]/30 flex items-center justify-center text-slate-300 hover:text-[#e9b557] hover:border-[#277e73]/40 transition-colors" aria-label="Instagram HIMTIKA UNSIKA">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -1075,11 +1019,9 @@
           </div>
         </div>
 
-        <!-- Link Columns (CnC 4-column grid) -->
         <div class="w-full lg:w-[65%]">
           <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-9 xl:grid-cols-4 xl:gap-5">
 
-            <!-- Kolom 1: Tentang Kami -->
             <div class="flex justify-center lg:justify-start">
               <div>
                 <h3 class="font-mono text-sm md:text-[15px] font-bold text-[#e9b557] uppercase tracking-wide mb-3 md:mb-4">TENTANG KAMI</h3>
@@ -1095,7 +1037,6 @@
               </div>
             </div>
 
-            <!-- Kolom 2: Media -->
             <div class="flex justify-center lg:justify-center">
               <div>
                 <h3 class="font-mono text-sm md:text-[15px] font-bold text-[#e9b557] uppercase tracking-wide mb-3 md:mb-4">MEDIA</h3>
@@ -1107,7 +1048,6 @@
               </div>
             </div>
 
-            <!-- Kolom 3: Event -->
             <div class="flex justify-center lg:justify-center">
               <div>
                 <h3 class="font-mono text-sm md:text-[15px] font-bold text-[#e9b557] uppercase tracking-wide mb-3 md:mb-4">EVENT</h3>
@@ -1125,7 +1065,6 @@
               </div>
             </div>
 
-            <!-- Kolom 4: Aplikasi Publik -->
             <div class="flex justify-center lg:justify-end">
               <div>
                 <h3 class="font-mono text-sm md:text-[15px] font-bold text-[#e9b557] uppercase tracking-wide mb-3 md:mb-4">APLIKASI PUBLIK</h3>
@@ -1145,7 +1084,6 @@
 
       </div>
 
-      <!-- Footer Bottom Bar (Identik CnC) -->
       <div class="flex flex-col items-center justify-center gap-2.5 mt-9 pt-6 border-t border-white/10 text-center sm:flex-row sm:gap-4">
         <div class="flex items-center justify-center gap-2.5 font-bold text-base text-white tracking-wide">
           <img src="assets/images/img-himtika.webp" alt="Logo HIMTIKA" class="w-6 h-6 object-contain">
@@ -1155,24 +1093,18 @@
     </div>
   </footer>
 
-  <!-- ========================================== -->
-  <!-- LIGHTBOX MODAL DOKUMENTASI -->
-  <!-- ========================================== -->
   <div id="lightbox-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
     <div class="relative max-w-4xl w-full bg-[#0c433d] border border-slate-700 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
-      <!-- Modal Close Button -->
       <button id="lightbox-close-btn" type="button" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/60 text-white hover:text-[#e9b557] hover:bg-black/90 transition-colors" aria-label="Tutup pratinjau foto">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
       
-      <!-- Modal Image Container -->
       <div class="max-h-[75vh] overflow-hidden flex items-center justify-center bg-black">
         <img id="lightbox-img" src="" alt="Pratinjau Foto Dokumentasi" class="w-full h-auto max-h-[75vh] object-contain">
       </div>
 
-      <!-- Modal Footer -->
       <div class="p-5 bg-[#0c433d] border-t border-[#277e73]/30 flex items-center justify-between">
         <h4 id="lightbox-title" class="text-sm font-bold text-white">Judul Foto</h4>
         <span class="text-xs text-slate-400">HGTC Dokumentasi Resmi</span>
@@ -1180,9 +1112,6 @@
     </div>
   </div>
 
-  <!-- ========================================== -->
-  <!-- INTERACTIVE VANILLA SCRIPT (Zero Bloat, High Perf) -->
-  <!-- ========================================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // 1. Mobile Menu Toggle

@@ -133,39 +133,12 @@
       }
     }
 
-    #statistik, #faq { background-color: #f8fafc; }
+    #faq { background-color: #f8fafc; }
     #dokumentasi { background-color: #0c433d; }
-    #statistik > div > div:first-child h2,
     #faq > div > div:first-child h2 { color: #0c433d; }
-    #statistik > div > div:first-child p,
     #faq > div > div:first-child p { color: #475569; }
-    #statistik .text-slate-400,
     #dokumentasi .text-slate-400, #faq .text-slate-400, footer .text-slate-400 { color: #d7e7e2; }
-    #statistik .text-slate-300,
     #dokumentasi .text-slate-300, #faq .text-slate-300, footer .text-slate-300 { color: #edf5f2; }
-    #statistik .statistics-grid { grid-template-columns: minmax(0, 1fr); }
-    @media (min-width: 380px) {
-      #statistik .statistics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (min-width: 1100px) {
-      #statistik .statistics-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    }
-    #statistik .mt-12 > h3 { color: #0c433d; }
-    #statistik .mt-12 .grid > div {
-      background-color: #0c433d;
-      border-color: #277e73;
-    }
-    #statistik .mt-12 .grid > div > p {
-      color: #ffffff;
-      font-size: 1rem;
-      line-height: 1.55;
-    }
-    #statistik .mt-12 .grid > div > div:last-child {
-      color: #f4d184;
-      font-size: 0.875rem;
-      line-height: 1.45;
-    }
-    #statistik .mt-12 .grid > div:nth-child(3) > div:last-child { color: #d7e7e2; }
     #dokumentasi [class~="text-[#277e73]"] { color: #e9b557; }
     #dokumentasi .gallery-item > div:first-child { position: relative; }
     #dokumentasi .gallery-item > div:first-child::after {
@@ -545,103 +518,6 @@
       </div>
     </section>
 
-    <section id="statistik" class="py-24 relative bg-[#f8fafc]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-            HGTC in Perspective
-          </h2>
-          <p class="text-slate-400 text-base sm:text-lg">
-            Ringkasan peserta dan hasil evaluasi kegiatan.
-          </p>
-        </div>
-
-        <div class="statistics-grid grid grid-cols-1 gap-4 sm:gap-6 mb-12 sm:mb-16">
-          <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#006749]/60 to-[#0c433d]/80 border border-[#277e73]/30 text-center hover:border-[#277e73]/40 transition-colors">
-            <div class="text-4xl sm:text-5xl font-extrabold text-[#e9b557] mb-2 flex items-center justify-center">
-              <span class="stat-counter" data-target="40">0</span>
-            </div>
-            <div class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-1">
-              Jumlah Peserta
-            </div>
-            <p class="text-xs text-slate-400">
-              Mahasiswa &amp; Delegasi Pengurus
-            </p>
-          </div>
-
-          <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#006749]/60 to-[#0c433d]/80 border border-[#277e73]/30 text-center hover:border-[#277e73]/40 transition-colors">
-            <div class="text-4xl sm:text-5xl font-extrabold text-[#e9b557] mb-2 flex items-center justify-center">
-              <span class="stat-counter" data-target="92.5" data-decimals="1">0</span>%
-            </div>
-            <div class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-1">
-              Indeks Kepuasan
-            </div>
-            <p class="text-xs text-slate-400">
-              60% Sangat Puas, 32.5% Puas
-            </p>
-          </div>
-
-          <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#1C1412]/60 to-[#0c433d]/80 border border-[#277e73]/30 text-center hover:border-[#e9b557]/40 transition-colors">
-            <div class="text-4xl sm:text-5xl font-extrabold text-[#e9b557] mb-2 flex items-center justify-center">
-              <span class="stat-counter" data-target="90.0" data-decimals="1">0</span>%
-            </div>
-            <div class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-1">
-              Kesesuaian Ekspektasi
-            </div>
-            <p class="text-xs text-slate-400">
-              Materi &amp; Kunjungan Sesuai
-            </p>
-          </div>
-
-          <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#1C1412]/60 to-[#0c433d]/80 border border-[#277e73]/30 text-center hover:border-[#e9b557]/40 transition-colors">
-            <div class="text-4xl sm:text-5xl font-extrabold text-[#e9b557] mb-2 flex items-center justify-center">
-              <span class="stat-counter" data-target="95.0" data-decimals="1">0</span>%
-            </div>
-            <div class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-1">
-              Rating Susunan Acara
-            </div>
-            <p class="text-xs text-slate-400">
-              60% Skor 5, 35% Skor 4
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-12">
-          <h3 class="text-xl font-bold text-[#0c433d] mb-6">
-            Tanggapan Peserta
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-6 sm:p-7 rounded-2xl bg-[#0c433d] border border-[#277e73]/50 transition-colors">
-              <p class="text-base text-white leading-relaxed mb-4">
-                &ldquo;Melihat langsung bagaimana arsitektur microservices dan pipeline data&hellip;&rdquo;
-              </p>
-              <div class="text-sm font-semibold text-[#ffe1a3]">
-                Peserta Mahasiswa Informatika · Evaluasi Sesi BCA Digital
-              </div>
-            </div>
-
-            <div class="p-6 sm:p-7 rounded-2xl bg-[#0c433d] border border-[#277e73]/50 transition-colors">
-              <p class="text-base text-white leading-relaxed mb-4">
-                &ldquo;Sesi di Hacktiv8 membuka pandangan luas tentang standar kompetensi software engineering&hellip;&rdquo;
-              </p>
-              <div class="text-sm font-semibold text-[#ffe1a3]">
-                Peserta Mahasiswa Informatika · Evaluasi Sesi Hacktiv8
-              </div>
-            </div>
-
-            <div class="p-6 sm:p-7 rounded-2xl bg-[#0c433d] border border-[#277e73]/50 transition-colors">
-              <p class="text-base text-white leading-relaxed mb-4">
-                &ldquo;Kegiatan tersusun sangat rapi dan interaktif. Berdiskusi langsung dengan tech leads&hellip;&rdquo;
-              </p>
-              <div class="text-sm font-semibold text-[#d7e7e2]">
-                Delegasi Pengurus HIMTIKA · Rekapitulasi LPJ
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="dokumentasi" class="py-24 relative bg-[#0c433d] border-t border-[#277e73]/30">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-12">
@@ -982,44 +858,6 @@
           if (menuOpen) toggleMenu();
         });
       });
-
-      const statElements = document.querySelectorAll('.stat-counter');
-      let statsAnimated = false;
-
-      const animateStats = () => {
-        statElements.forEach(el => {
-          const target = parseFloat(el.getAttribute('data-target'));
-          const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
-          const duration = 1800;
-          const startTime = performance.now();
-
-          const step = (now) => {
-            const progress = Math.min((now - startTime) / duration, 1);
-            const ease = 1 - Math.pow(1 - progress, 3);
-            const current = ease * target;
-            el.textContent = current.toFixed(decimals);
-
-            if (progress < 1) {
-              requestAnimationFrame(step);
-            } else {
-              el.textContent = target.toFixed(decimals);
-            }
-          };
-          requestAnimationFrame(step);
-        });
-      };
-
-      const statObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !statsAnimated) {
-            statsAnimated = true;
-            animateStats();
-          }
-        });
-      }, { threshold: 0.25 });
-
-      const statSection = document.getElementById('statistik');
-      if (statSection) statObserver.observe(statSection);
 
       const filterBtns = document.querySelectorAll('.gallery-filter-btn');
       const galleryItems = document.querySelectorAll('.gallery-item');

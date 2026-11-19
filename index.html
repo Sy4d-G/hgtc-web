@@ -124,8 +124,8 @@
     #dokumentasi .gallery-item > div:first-child::after {
       content: "";
       position: absolute;
-      inset: 35% 0 0;
-      background: linear-gradient(to bottom, transparent, rgba(12, 67, 61, 0.96));
+      inset: 58% 0 0;
+      background: linear-gradient(to bottom, transparent, rgba(12, 67, 61, 0.9));
       pointer-events: none;
     }
     #dokumentasi .gallery-item > div:first-child > div {
@@ -154,58 +154,62 @@
 </head>
 <body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-[#277e73]/20 selection:text-[#277e73] min-h-screen overflow-x-hidden">
 
-  <div id="mobile-menu" class="fixed inset-x-0 top-[85px] bg-white/95 backdrop-blur-xl border-b border-[#277e73]/20 p-6 z-50 transform -translate-y-full transition-transform duration-300 lg:hidden shadow-2xl">
-    <ul class="flex flex-col gap-4 text-sm font-semibold text-slate-700">
-      <li><a href="#hero" class="mobile-link block py-2 px-3 rounded-md hover:bg-[#277e73]/10 hover:text-[#277e73]">Home</a></li>
-      <li><a href="#tentang" class="mobile-link block py-2 px-3 rounded-md hover:bg-[#277e73]/10 hover:text-[#277e73]">About</a></li>
-      <li><a href="#perusahaan" class="mobile-link block py-2 px-3 rounded-md hover:bg-[#277e73]/10 hover:text-[#277e73]">Companies</a></li>
-      <li><a href="#dokumentasi" class="mobile-link block py-2 px-3 rounded-md hover:bg-[#277e73]/10 hover:text-[#277e73]">Gallery</a></li>
-      <li><a href="#faq" class="mobile-link block py-2 px-3 rounded-md hover:bg-[#277e73]/10 hover:text-[#277e73]">FaQ</a></li>
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav id="navbar" class="w-full max-w-7xl mx-auto flex items-center justify-between h-[72px] sm:h-[80px] px-4 sm:px-6 lg:px-8">
+      <a href="#hero" class="flex items-center gap-3 shrink-0 group focus:outline-none">
+        <img src="assets/images/img-himtika.webp" alt="Logo HIMTIKA" class="w-9 h-9 sm:w-10 sm:h-10 object-contain">
+        <span class="text-[#0c433d] text-xl sm:text-2xl font-bold tracking-tight font-sans transition-colors duration-200 group-hover:text-[#277e73]">
+          HGTC
+        </span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-8 shrink-0">
+        <ul class="flex items-center gap-7 text-[15px] font-semibold text-slate-800">
+          <li>
+            <a href="#hero" class="hover:text-[#277e73] transition-colors py-1">Home</a>
+          </li>
+          <li>
+            <a href="#tentang" class="hover:text-[#277e73] transition-colors py-1">About</a>
+          </li>
+          <li>
+            <a href="#perusahaan" class="hover:text-[#277e73] transition-colors py-1">Companies</a>
+          </li>
+          <li>
+            <a href="#dokumentasi" class="hover:text-[#277e73] transition-colors py-1">Gallery</a>
+          </li>
+          <li>
+            <a href="#faq" class="hover:text-[#277e73] transition-colors py-1">FaQ</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex lg:hidden shrink-0">
+        <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-[#0c433d] hover:text-[#277e73] hover:bg-[#277e73]/10 active:scale-95 transition-all" aria-label="Buka menu navigasi" aria-expanded="false">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
+
+  <div id="mobile-menu" class="fixed inset-x-0 top-[72px] sm:top-[80px] bg-white/95 backdrop-blur-xl border-b border-[#277e73]/20 px-6 py-6 z-40 transform -translate-y-full transition-transform duration-300 lg:hidden shadow-2xl">
+    <ul class="flex flex-col gap-2 text-base font-semibold text-slate-700">
+      <li><a href="#hero" class="mobile-link block py-3 px-4 rounded-xl hover:bg-[#277e73]/10 hover:text-[#277e73] active:bg-[#277e73]/15 transition-colors">Home</a></li>
+      <li><a href="#tentang" class="mobile-link block py-3 px-4 rounded-xl hover:bg-[#277e73]/10 hover:text-[#277e73] active:bg-[#277e73]/15 transition-colors">About</a></li>
+      <li><a href="#perusahaan" class="mobile-link block py-3 px-4 rounded-xl hover:bg-[#277e73]/10 hover:text-[#277e73] active:bg-[#277e73]/15 transition-colors">Companies</a></li>
+      <li><a href="#dokumentasi" class="mobile-link block py-3 px-4 rounded-xl hover:bg-[#277e73]/10 hover:text-[#277e73] active:bg-[#277e73]/15 transition-colors">Gallery</a></li>
+      <li><a href="#faq" class="mobile-link block py-3 px-4 rounded-xl hover:bg-[#277e73]/10 hover:text-[#277e73] active:bg-[#277e73]/15 transition-colors">FaQ</a></li>
     </ul>
   </div>
 
   <main>
-    <section id="hero" class="relative min-h-[640px] sm:min-h-[720px] lg:min-h-screen flex flex-col justify-between bg-[#edf3ef] bg-no-repeat bg-bottom bg-cover px-4 sm:px-6 lg:px-8 overflow-hidden" style="background-image: url('assets/images/hero-illustration.webp');">
-
-      <nav id="navbar" class="w-full max-w-7xl mx-auto flex items-center justify-between h-[85px] pt-3 bg-transparent z-40 relative">
-        <a href="#hero" class="flex items-center gap-3 shrink-0 group focus:outline-none">
-          <img src="assets/images/img-himtika.webp" alt="Logo HIMTIKA" class="w-9 h-9 sm:w-10 sm:h-10 object-contain">
-          <span class="text-[#0c433d] text-xl sm:text-2xl font-bold tracking-tight font-sans transition-colors duration-200 group-hover:text-[#277e73]">
-            HGTC
-          </span>
-        </a>
-
-        <div class="hidden lg:flex items-center gap-8 shrink-0">
-          <ul class="flex items-center gap-7 text-[15px] font-semibold text-slate-800">
-            <li>
-              <a href="#hero" class="hover:text-[#277e73] transition-colors py-1">Home</a>
-            </li>
-            <li>
-              <a href="#tentang" class="hover:text-[#277e73] transition-colors py-1">About</a>
-            </li>
-            <li>
-              <a href="#perusahaan" class="hover:text-[#277e73] transition-colors py-1">Companies</a>
-            </li>
-            <li>
-              <a href="#dokumentasi" class="hover:text-[#277e73] transition-colors py-1">Gallery</a>
-            </li>
-            <li>
-              <a href="#faq" class="hover:text-[#277e73] transition-colors py-1">FaQ</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="flex lg:hidden shrink-0">
-          <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-700 hover:text-[#277e73] hover:bg-slate-200/50 transition-colors" aria-label="Buka menu navigasi" aria-expanded="false">
-            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-      </nav>
+    <section id="hero" class="relative min-h-[640px] sm:min-h-[720px] lg:min-h-screen flex flex-col justify-between bg-[#edf3ef] bg-no-repeat bg-bottom bg-cover px-4 sm:px-6 lg:px-8 pt-[72px] sm:pt-[80px] overflow-hidden" style="background-image: url('assets/images/hero-illustration.webp');">
 
       <div class="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center justify-center text-center my-auto pt-6 sm:pt-10 pb-44 sm:pb-60 lg:pb-72">
         <div class="relative w-full max-w-2xl sm:max-w-3xl px-4">
@@ -316,7 +320,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7">
           <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
             <img src="assets/images/learn-career.webp" alt="Career Inspiration" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none"></div>
             <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end text-left">
               <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug tracking-tight">
                 Career Inspiration
@@ -329,7 +333,7 @@
 
           <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
             <img src="assets/images/learn-professional.webp" alt="Professional Links" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none"></div>
             <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end text-left">
               <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug tracking-tight">
                 Professional Links
@@ -342,7 +346,7 @@
 
           <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
             <img src="assets/images/learn-industry.webp" alt="Industry Insights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none"></div>
             <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end text-left">
               <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug tracking-tight">
                 Industry Insights
@@ -373,7 +377,7 @@
 
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="relative pl-8 sm:pl-12 lg:pl-14">
-          <div class="absolute left-3.5 sm:left-4 lg:left-5 top-3 bottom-10 w-0.5 bg-[#e8b657]/45 pointer-events-none"></div>
+          <div class="absolute left-[9px] sm:left-[11px] top-3 bottom-10 w-0.5 bg-[#e8b657]/45 pointer-events-none"></div>
 
           <div class="relative mb-14 sm:mb-20">
             <div class="absolute -left-8 sm:-left-12 lg:-left-14 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dca853] ring-4 ring-[#f3f6f4]"></div>
@@ -791,6 +795,8 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const header = document.getElementById('site-header');
+      const mobileBackdrop = document.getElementById('mobile-backdrop');
       const mobileBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       const iconOpen = document.getElementById('menu-icon-open');
@@ -803,23 +809,39 @@
         if (menuOpen) {
           mobileMenu.classList.remove('-translate-y-full');
           mobileMenu.classList.add('translate-y-0');
+          mobileBackdrop.classList.remove('hidden');
           iconOpen.classList.add('hidden');
           iconClose.classList.remove('hidden');
           mobileBtn.setAttribute('aria-expanded', 'true');
+          header.classList.add('bg-white/95');
         } else {
           mobileMenu.classList.add('-translate-y-full');
           mobileMenu.classList.remove('translate-y-0');
+          mobileBackdrop.classList.add('hidden');
           iconOpen.classList.remove('hidden');
           iconClose.classList.add('hidden');
           mobileBtn.setAttribute('aria-expanded', 'false');
+          if (window.scrollY <= 20) header.classList.remove('bg-white/95');
         }
       };
 
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-[#277e73]/15');
+        } else if (!menuOpen) {
+          header.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-[#277e73]/15');
+        }
+      }, { passive: true });
+
       mobileBtn.addEventListener('click', toggleMenu);
+      mobileBackdrop.addEventListener('click', toggleMenu);
       mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
           if (menuOpen) toggleMenu();
         });
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuOpen) toggleMenu();
       });
 
       const filterBtns = document.querySelectorAll('.gallery-filter-btn');

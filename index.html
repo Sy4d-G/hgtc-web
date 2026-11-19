@@ -81,6 +81,8 @@
     .glow-gold {
       box-shadow: 0 0 35px -5px rgba(233, 181, 87, 0.3);
     }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
     a:focus-visible, button:focus-visible {
       outline: 2px solid #277e73;
@@ -323,8 +325,8 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7">
-          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
+        <div id="learn-track" class="flex md:grid md:grid-cols-3 gap-5 sm:gap-7 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-2 md:pb-0 scroll-smooth no-scrollbar px-4 sm:px-0 -mx-4 sm:mx-0">
+          <div class="flex-shrink-0 w-[86%] sm:w-[70%] md:w-auto snap-center relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
             <img src="assets/images/learn-career.webp" alt="Career Inspiration" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
             <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none"></div>
             <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end text-left">
@@ -337,7 +339,7 @@
             </div>
           </div>
 
-          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
+          <div class="flex-shrink-0 w-[86%] sm:w-[70%] md:w-auto snap-center relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
             <img src="assets/images/learn-professional.webp" alt="Professional Links" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
             <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none"></div>
             <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end text-left">
@@ -350,7 +352,7 @@
             </div>
           </div>
 
-          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
+          <div class="flex-shrink-0 w-[86%] sm:w-[70%] md:w-auto snap-center relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/4.3] shadow-md group">
             <img src="assets/images/learn-industry.webp" alt="Industry Insights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
             <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none"></div>
             <div class="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end text-left">
@@ -362,6 +364,12 @@
               </p>
             </div>
           </div>
+        </div>
+
+        <div id="learn-indicators" class="flex md:hidden items-center justify-center gap-2 mt-5">
+          <button type="button" class="learn-dot w-6 h-2 rounded-full bg-[#0c433d] transition-all duration-300" aria-label="Slide 1"></button>
+          <button type="button" class="learn-dot w-2 h-2 rounded-full bg-[#0c433d]/30 transition-all duration-300" aria-label="Slide 2"></button>
+          <button type="button" class="learn-dot w-2 h-2 rounded-full bg-[#0c433d]/30 transition-all duration-300" aria-label="Slide 3"></button>
         </div>
       </div>
     </section>
@@ -847,6 +855,41 @@
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && menuOpen) toggleMenu();
       });
+
+      const learnTrack = document.getElementById('learn-track');
+      const learnDots = document.querySelectorAll('.learn-dot');
+      if (learnTrack && learnDots.length) {
+        const learnCards = Array.from(learnTrack.children);
+        const updateLearnDots = () => {
+          const trackRect = learnTrack.getBoundingClientRect();
+          const trackCenter = trackRect.left + trackRect.width / 2;
+          let closestIndex = 0;
+          let minDiff = Infinity;
+          learnCards.forEach((card, i) => {
+            const rect = card.getBoundingClientRect();
+            const cardCenter = rect.left + rect.width / 2;
+            const diff = Math.abs(trackCenter - cardCenter);
+            if (diff < minDiff) {
+              minDiff = diff;
+              closestIndex = i;
+            }
+          });
+          learnDots.forEach((dot, i) => {
+            if (i === closestIndex) {
+              dot.className = 'learn-dot w-6 h-2 rounded-full bg-[#0c433d] transition-all duration-300';
+            } else {
+              dot.className = 'learn-dot w-2 h-2 rounded-full bg-[#0c433d]/30 transition-all duration-300';
+            }
+          });
+        };
+
+        learnTrack.addEventListener('scroll', updateLearnDots, { passive: true });
+        learnDots.forEach((dot, i) => {
+          dot.addEventListener('click', () => {
+            learnCards[i]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          });
+        });
+      }
 
       const filterBtns = document.querySelectorAll('.gallery-filter-btn');
       const galleryItems = document.querySelectorAll('.gallery-item');

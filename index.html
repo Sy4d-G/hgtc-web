@@ -150,6 +150,12 @@
     #dokumentasi .gallery-item > div:first-child > div h3 { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); }
     #faq button:hover { color: #e9b557; }
     button, a[href] { cursor: pointer; }
+    @media (max-width: 1023px) {
+      .desktop-nav { display: none !important; }
+    }
+    @media (min-width: 1024px) {
+      .mobile-nav-toggle, #mobile-menu, #mobile-backdrop { display: none !important; }
+    }
   </style>
 </head>
 <body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-[#277e73]/20 selection:text-[#277e73] min-h-screen overflow-x-hidden">
@@ -163,7 +169,7 @@
         </span>
       </a>
 
-      <div class="hidden lg:flex items-center gap-8 shrink-0">
+      <div class="desktop-nav hidden lg:flex items-center gap-8 shrink-0">
         <ul class="flex items-center gap-7 text-[15px] font-semibold text-slate-800">
           <li>
             <a href="#hero" class="hover:text-[#277e73] transition-colors py-1">Home</a>
@@ -183,7 +189,7 @@
         </ul>
       </div>
 
-      <div class="flex lg:hidden shrink-0">
+      <div class="mobile-nav-toggle flex lg:hidden shrink-0">
         <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-[#0c433d] hover:text-[#277e73] hover:bg-[#277e73]/10 active:scale-95 transition-all" aria-label="Buka menu navigasi" aria-expanded="false">
           <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -198,7 +204,7 @@
 
   <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
 
-  <div id="mobile-menu" class="fixed inset-x-0 top-[72px] sm:top-[80px] bg-white/95 backdrop-blur-xl border-b border-[#277e73]/20 px-6 py-6 z-40 transform -translate-y-full transition-transform duration-300 lg:hidden shadow-2xl">
+  <div id="mobile-menu" class="hidden fixed inset-x-0 top-[72px] sm:top-[80px] bg-white/95 backdrop-blur-xl border-b border-[#277e73]/20 px-6 py-6 z-40 lg:hidden shadow-2xl">
     <ul class="flex flex-col gap-2 text-base font-semibold text-slate-700">
       <li><a href="#hero" class="mobile-link block py-3 px-4 rounded-xl hover:bg-[#277e73]/10 hover:text-[#277e73] active:bg-[#277e73]/15 transition-colors">Home</a></li>
       <li><a href="#tentang" class="mobile-link block py-3 px-4 rounded-xl hover:bg-[#277e73]/10 hover:text-[#277e73] active:bg-[#277e73]/15 transition-colors">About</a></li>
@@ -807,16 +813,14 @@
       const toggleMenu = () => {
         menuOpen = !menuOpen;
         if (menuOpen) {
-          mobileMenu.classList.remove('-translate-y-full');
-          mobileMenu.classList.add('translate-y-0');
+          mobileMenu.classList.remove('hidden');
           mobileBackdrop.classList.remove('hidden');
           iconOpen.classList.add('hidden');
           iconClose.classList.remove('hidden');
           mobileBtn.setAttribute('aria-expanded', 'true');
           header.classList.add('bg-white/95');
         } else {
-          mobileMenu.classList.add('-translate-y-full');
-          mobileMenu.classList.remove('translate-y-0');
+          mobileMenu.classList.add('hidden');
           mobileBackdrop.classList.add('hidden');
           iconOpen.classList.remove('hidden');
           iconClose.classList.add('hidden');
